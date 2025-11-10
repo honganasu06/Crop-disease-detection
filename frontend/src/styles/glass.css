@@ -1,0 +1,80 @@
+/* Glass Morphism and Modern UI Styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-primary-50 to-primary-100 min-h-screen font-['Plus_Jakarta_Sans'];
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/30 backdrop-blur-lg border border-white/20 shadow-xl 
+           hover:bg-white/40 hover:scale-[1.02] transition-all duration-300;
+  }
+  
+  .glass-button {
+    @apply px-6 py-2.5 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 
+           rounded-lg font-medium text-primary-700 transition-all duration-300
+           hover:shadow-lg hover:scale-[1.02] active:scale-[0.98];
+  }
+
+  .glass-input {
+    @apply bg-white/20 backdrop-blur-sm border border-white/20 rounded-lg px-4 py-2
+           focus:outline-none focus:ring-2 focus:ring-primary-500/50 transition-all duration-300;
+  }
+
+  .glass-panel {
+    @apply bg-white/40 backdrop-blur-md rounded-2xl border border-white/20 
+           shadow-lg p-6 transition-all duration-300 animate-fade-in;
+  }
+
+  .nav-link {
+    @apply relative px-4 py-2 text-gray-600 hover:text-primary-600 transition-colors duration-200
+           after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-0.5 
+           after:w-0 hover:after:w-full after:bg-primary-500 after:transition-all after:duration-300;
+  }
+}
+
+/* Loading Animation */
+.loading-spinner {
+  @apply w-12 h-12 border-4 border-primary-200 border-t-primary-600 rounded-full animate-spin;
+}
+
+/* Smooth Page Transitions */
+.page-transition {
+  @apply animate-fade-in;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-primary-50;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-200 rounded-full hover:bg-primary-300 transition-colors duration-200;
+}
+
+/* Card Hover Effects */
+.hover-lift {
+  @apply transition-transform duration-300 hover:translate-y-[-4px];
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
