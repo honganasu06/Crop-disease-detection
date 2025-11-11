@@ -251,13 +251,13 @@ VITE_API_URL=https://your-backend-url.com
 
 ## 👥 Team
 
-- **Alex Johnson** - Data Collection & Preparation
-- **Sarah Williams** - AI Model Development
-- **Michael Chen** - Backend & Deployment
-- **Emily Davis** - Frontend Development
+- **Harsha** - Data Collection & Preparation
+- **shabrish** - AI Model Development
+- **nadan** - Backend & Deployment
+- **sreenitha** - Frontend Development
 
-**Institution**: University of Agricultural Sciences  
-**Guide**: Dr. Robert Anderson  
+**Institution**: Msrit 
+**Guide**: Meera ma'am 
 **Project Year**: 2024-2025
 
 ## 📝 License
