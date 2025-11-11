@@ -7,7 +7,7 @@ A complete full-stack web application for detecting crop diseases using AI/ML, f
 ![React](https://img.shields.io/badge/React-18.0+-61DAFB)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.15-orange)
 
-## 🎯 Features
+##  Features
 
 - **AI-Powered Detection**: Upload plant leaf images and get instant disease predictions
 - **High Accuracy**: CNN model trained on PlantVillage dataset (38 disease classes)
@@ -18,7 +18,7 @@ A complete full-stack web application for detecting crop diseases using AI/ML, f
 - **Responsive Design**: Works seamlessly on desktop and mobile devices
 - **Real-time Processing**: Get results in seconds
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 
@@ -87,7 +87,7 @@ npm run dev
 
 The frontend will be available at `http://localhost:5173`
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 agrivision/
@@ -122,7 +122,7 @@ agrivision/
 └── README.md
 ```
 
-## 🔧 Technology Stack
+##  Technology Stack
 
 ### Backend
 - **Framework**: Flask 3.0
@@ -141,7 +141,7 @@ agrivision/
 - **HTTP Client**: Axios
 - **PDF Generation**: jsPDF
 
-## 🌐 API Endpoints
+##  API Endpoints
 
 ### POST `/predict`
 Upload an image for disease detection.
@@ -185,7 +185,7 @@ Health check endpoint.
 }
 ```
 
-## 📊 Supported Diseases
+##  Supported Diseases
 
 The model can detect 38 different plant diseases across multiple crops:
 - Apple (4 diseases + healthy)
@@ -198,7 +198,7 @@ The model can detect 38 different plant diseases across multiple crops:
 - Tomato (9 diseases + healthy)
 - And more...
 
-## 🎨 UI/UX Features
+##  UI/UX Features
 
 - **Modern Design**: Clean, green-themed interface
 - **Drag & Drop**: Easy image upload functionality
@@ -207,7 +207,7 @@ The model can detect 38 different plant diseases across multiple crops:
 - **Smooth Animations**: Framer Motion powered transitions
 - **Interactive Charts**: Visual analytics with Recharts
 
-## 🚀 Deployment
+##  Deployment
 
 ### Backend Deployment
 
@@ -249,7 +249,7 @@ Frontend (`.env`):
 VITE_API_URL=https://your-backend-url.com
 ```
 
-## 👥 Team
+##  Team
 
 - **Harsha** - Data Collection & Preparation
 - **shabrish** - AI Model Development
@@ -260,20 +260,20 @@ VITE_API_URL=https://your-backend-url.com
 **Guide**: Meera ma'am 
 **Project Year**: 2024-2025
 
-## 📝 License
+##  License
 
 This project is developed as an academic capstone project.
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-## 📧 Contact
+##  Contact
 
-- Email: agrivision@example.com
-- Project Link: [https://github.com/yourusername/agrivision](https://github.com/yourusername/agrivision)
+- Email: honganasu06@gmail.com
+- Project Link: [https://github.com/honganasu06/Crop-disease-detection](https://github.com/honganasu06/Crop-disease-detection)
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - PlantVillage dataset for training data
 - TensorFlow and Keras teams
