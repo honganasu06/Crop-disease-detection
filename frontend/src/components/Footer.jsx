@@ -44,7 +44,7 @@ const Footer = () => {
                   whileHover={{ scale: 1.1, y: -2 }}
                   className="w-9 h-9 rounded-lg glass flex items-center justify-center text-neutral-600 dark:text-neutral-400 hover:text-primary transition-colors"
                 >
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <svg className="icon-sm" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2C6.477 2 2 6.477 2 12c0 5.523 4.477 10 10 10s10-4.477 10-10S17.523 2 12 2z"/>
                   </svg>
                 </motion.a>

@@ -3,27 +3,27 @@ import { motion } from 'framer-motion';
 const About = () => {
   const teamMembers = [
     {
-      name: 'Alex Johnson',
+      name: 'Harsha Vardhan',
       role: 'Data Collection & Preparation',
-      image: 'https://ui-avatars.com/api/?name=Alex+Johnson&background=5B9BD5&color=fff&size=128',
+      image: 'https://ui-avatars.com/api/?name=harsha+vardhan&background=5B9BD5&color=fff&size=128',
       description: 'Responsible for gathering and preprocessing the PlantVillage dataset.',
     },
     {
-      name: 'Sarah Williams',
+      name: 'nandan',
       role: 'AI Model Development',
-      image: 'https://ui-avatars.com/api/?name=Sarah+Williams&background=7FB3B8&color=fff&size=128',
+      image: 'https://ui-avatars.com/api/?name=nandan&background=7FB3B8&color=fff&size=128',
       description: 'Designed and trained the CNN model for disease classification.',
     },
     {
-      name: 'Michael Chen',
+      name: 'shabrish',
       role: 'Backend & Deployment',
-      image: 'https://ui-avatars.com/api/?name=Michael+Chen&background=B8A9D9&color=fff&size=128',
+      image: 'https://ui-avatars.com/api/?name=shabrish&background=B8A9D9&color=fff&size=128',
       description: 'Built the Flask API and deployed the application infrastructure.',
     },
     {
-      name: 'Emily Davis',
+      name: 'sreenitha',
       role: 'Frontend Development',
-      image: 'https://ui-avatars.com/api/?name=Emily+Davis&background=8DBDE1&color=fff&size=128',
+      image: 'https://ui-avatars.com/api/?name=sreenitha&background=8DBDE1&color=fff&size=128',
       description: 'Created the React interface with modern UI/UX design.',
     },
   ];
@@ -77,7 +77,7 @@ const About = () => {
               className="card-glass"
             >
               <h2 className="text-xl md:text-2xl font-bold mb-4 text-primary flex items-center gap-2">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 Mission

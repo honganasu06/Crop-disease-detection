@@ -39,4 +39,4 @@ echo.
 
 python app.py
 
-pause
+pause1
