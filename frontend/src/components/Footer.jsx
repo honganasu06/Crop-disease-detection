@@ -22,13 +22,13 @@ const Footer = () => {
   };
 
   return (
-  <footer className="glass-nav border-t border-white/10 py-8 mt-auto">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-  <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
+  <footer className="glass-nav border-t border-white/10 py-12 mt-auto">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-6">
           {/* Brand Section */}
           <div className="col-span-1 md:col-span-1">
             <Link to="/" className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 rounded-xl flex items-center justify-center glass-card">
+              <div className="w-3 h-3 rounded-xl flex items-center justify-center glass-card">
                 <span className="text-primary font-bold text-sm">AV</span>
               </div>
               <span className="text-xl font-bold text-gradient">AgriVision</span>
@@ -41,12 +41,10 @@ const Footer = () => {
                 <motion.a
                   key={social}
                   href="#"
-                  whileHover={{ scale: 1.1, y: -2 }}
+                  whileHover={{ scale: 1.05, y: -2 }}
                   className="w-9 h-9 rounded-lg glass flex items-center justify-center text-neutral-600 dark:text-neutral-400 hover:text-primary transition-colors"
                 >
-                  <svg className="icon-sm" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2C6.477 2 2 6.477 2 12c0 5.523 4.477 10 10 10s10-4.477 10-10S17.523 2 12 2z"/>
-                  </svg>
+                  ●
                 </motion.a>
               ))}
             </div>

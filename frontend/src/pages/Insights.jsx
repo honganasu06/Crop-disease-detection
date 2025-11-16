@@ -29,7 +29,7 @@ const Insights = () => {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <div className="inline-block animate-spin rounded-full h-16 w-16 border-b-4 border-primary mb-4"></div>
+          <div className="inline-block animate-spin rounded-full h-3 w-3 border-b-4 border-primary mb-4"></div>
           <p className="text-lg text-neutral-700 dark:text-neutral-300">Loading insights...</p>
         </div>
       </div>
@@ -40,7 +40,7 @@ const Insights = () => {
     return (
       <div className="min-h-screen flex items-center justify-center px-4">
         <div className="card-glass border-red-500/50 bg-red-500/10 max-w-md text-center">
-          <svg className="icon-xl text-red-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-3 h-3 text-red-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
           <h3 className="text-lg font-semibold text-red-400 mb-2">Error Loading Insights</h3>
@@ -72,17 +72,17 @@ const Insights = () => {
           <div className="grid md:grid-cols-3 gap-6 mb-8">
               {[
               { label: 'Total Predictions', value: insights?.total_predictions || 0, colorClass: 'text-primary', icon: (
-                <svg className="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                 </svg>
               ) },
               { label: 'Average Confidence', value: `${insights?.average_confidence?.toFixed(1) || 0}%`, colorClass: 'text-secondary', icon: (
-                <svg className="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                 </svg>
               ) },
               { label: 'Unique Diseases', value: insights?.frequent_diseases?.length || 0, colorClass: 'text-accent', icon: (
-                <svg className="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M6.343 6.343l-.707.707m12.728 0l-.707-.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
                 </svg>
               ) },
@@ -169,7 +169,7 @@ const Insights = () => {
             </div>
           ) : (
             <div className="card-glass text-center py-12">
-              <svg className="icon icon-lg text-neutral-400 dark:text-neutral-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-3 h-3 text-neutral-400 dark:text-neutral-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
               </svg>
               <h3 className="text-xl font-semibold text-neutral-700 dark:text-neutral-300 mb-2">No Data Available</h3>

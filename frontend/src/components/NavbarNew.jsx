@@ -21,14 +21,14 @@ const Navbar = () => {
       className="sticky top-0 z-50"
     >
       <div className="glass-card mx-4 mt-4 rounded-xl">
-        <div className="max-w-7xl mx-auto px-6 py-4">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center">
               <Link to="/" className="flex items-center space-x-3 group">
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-10 h-10 bg-gradient-to-br from-primary-400 to-primary-600 
+                  className="w-3 h-3 bg-gradient-to-br from-primary-400 to-primary-600 
                            rounded-xl flex items-center justify-center shadow-lg"
                 >
                   <span className="text-white text-sm font-semibold">AV</span>
@@ -41,7 +41,7 @@ const Navbar = () => {
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-1">
+            <div className="hidden md:flex items-center space-x-6">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
@@ -68,7 +68,7 @@ const Navbar = () => {
               className="md:hidden glass-button p-2"
             >
               <svg
-                className="h-6 w-6 text-primary-600"
+                className="w-3 h-3 text-primary-600"
                 fill="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -88,7 +88,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <AnimatePresence>
-          {isOpen && (
+            {isOpen && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
@@ -96,7 +96,7 @@ const Navbar = () => {
               transition={{ duration: 0.3 }}
               className="md:hidden border-t border-white/10"
             >
-              <div className="px-4 py-3 space-y-1">
+              <div className="px-4 py-3 space-y-2">
                 {navLinks.map((link, index) => (
                   <motion.div
                     key={link.path}

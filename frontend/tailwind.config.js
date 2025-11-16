@@ -8,31 +8,32 @@ export default {
   theme: {
     extend: {
       colors: {
+        /* Standardized theme tokens requested by design */
         primary: {
-          DEFAULT: '#5B9BD5', // Soft blue
-          50: '#F0F7FC',
-          100: '#D9E9F5',
-          200: '#B3D3EB',
-          300: '#8DBDE1',
-          400: '#67A7D7',
-          500: '#5B9BD5',
-          600: '#4A7FAD',
-          700: '#396385',
-          800: '#28475D',
-          900: '#172B35',
+          DEFAULT: '#3b82f6', // blue-500 (accent)
+          50: '#eef6ff',
+          100: '#dbeefe',
+          200: '#b7ddfd',
+          300: '#93ccfb',
+          400: '#6fbaf9',
+          500: '#3b82f6',
+          600: '#2f6fd1',
+          700: '#2558a6',
+          800: '#1a3f6b',
+          900: '#10243b',
         },
         secondary: {
-          DEFAULT: '#7FB3B8', // Pastel teal
-          50: '#F0F7F8',
-          100: '#D9EAEC',
-          200: '#B3D5D9',
-          300: '#8DC0C6',
-          400: '#67ABB3',
-          500: '#7FB3B8',
-          600: '#669093',
-          700: '#4D6D6E',
-          800: '#334A49',
-          900: '#1A2724',
+          DEFAULT: '#7dd3fc', // cyan-300 (secondary)
+          50: '#f5fbfe',
+          100: '#ecf7fd',
+          200: '#d6f0fb',
+          300: '#bff0fa',
+          400: '#9beaf8',
+          500: '#7dd3fc',
+          600: '#5fb7da',
+          700: '#3f90a8',
+          800: '#2c606f',
+          900: '#18333a',
         },
         accent: {
           DEFAULT: '#B8A9D9', // Soft purple
@@ -95,6 +96,7 @@ export default {
       },
       backdropBlur: {
         xs: '2px',
+        '12': '12px',
       },
     },
   },
