@@ -13,20 +13,40 @@ A complete full-stack web application for detecting crop diseases using AI/ML, f
 - **High Accuracy**: CNN model trained on PlantVillage dataset (38 disease classes)
 - **Confidence Scoring**: Get percentage-based confidence scores for predictions
 - **Treatment Recommendations**: Receive specific remedies for each detected disease
-- **Analytics Dashboard**: Track disease patterns and detection insights
-- **PDF Reports**: Download detailed reports of detection results
+- **Liquid Glass Animations**: Beautiful morphing glassmorphism effects throughout the UI
+- **Modern UI Design**: Clean, professional interface with Radix UI components
 - **Responsive Design**: Works seamlessly on desktop and mobile devices
 - **Real-time Processing**: Get results in seconds
+- **Dark Mode Support**: Toggle between light and dark themes
 
 ## 🚀 Quick Start
 
 ### Prerequisites
 
-- Python 3.10 or higher
-- Node.js 18 or higher
+- Python 3.13 or higher
+- Node.js 22 or higher
 - npm or yarn
 
-### Backend Setup
+### Quick Start (Windows)
+
+1. **Start Backend**:
+   Double-click `start-backend.bat` or run in terminal:
+   ```bash
+   .\start-backend.bat
+   ```
+
+2. **Start Frontend**:
+   Double-click `start-frontend.bat` or run in terminal:
+   ```bash
+   .\start-frontend.bat
+   ```
+
+3. **Access App**:
+   Open [http://localhost:3000](http://localhost:3000)
+
+### Manual Setup (Cross-Platform)
+
+#### Backend Setup
 
 1. Navigate to the backend directory:
 ```bash
@@ -77,15 +97,18 @@ npm install
 ```
 
 3. Configure API endpoint:
-- The `.env` file is already configured for local development
-- For production, update `VITE_API_URL` in `.env`
+- Create a `.env` file in the frontend directory:
+```bash
+VITE_API_URL=http://localhost:5000
+```
+- For production, update `VITE_API_URL` to your deployed backend URL
 
 4. Run the development server:
 ```bash
 npm run dev
 ```
 
-The frontend will be available at `http://localhost:5173`
+The frontend will be available at `http://localhost:3000` (or the port specified in vite.config.ts)
 
 ## 📁 Project Structure
 
@@ -102,22 +125,23 @@ agrivision/
 │
 ├── frontend/
 │   ├── src/
-│   │   ├── pages/
-│   │   │   ├── Home.jsx      # Landing page
-│   │   │   ├── Detect.jsx    # Disease detection page
-│   │   │   ├── Insights.jsx  # Analytics dashboard
-│   │   │   ├── About.jsx     # About page
-│   │   │   └── Contact.jsx   # Contact page
 │   │   ├── components/
-│   │   │   ├── Navbar.jsx    # Navigation bar
-│   │   │   └── Footer.jsx    # Footer component
+│   │   │   ├── HomePage.tsx      # Landing page
+│   │   │   ├── UploadPage.tsx    # Disease detection upload page
+│   │   │   ├── ResultsPage.tsx   # Results display page
+│   │   │   ├── WeatherPage.tsx   # Weather information page
+│   │   │   ├── Navbar.tsx        # Navigation bar
+│   │   │   └── ui/               # Radix UI components
 │   │   ├── services/
-│   │   │   └── api.js        # API service layer
-│   │   ├── App.jsx           # Main app component
-│   │   ├── main.jsx          # Entry point
-│   │   └── index.css         # Global styles
+│   │   │   └── api.ts            # API service layer
+│   │   ├── styles/
+│   │   │   ├── globals.css       # Global styles
+│   │   │   └── liquid-glass.css  # Liquid glass animations
+│   │   ├── App.tsx               # Main app component
+│   │   ├── main.tsx              # Entry point
+│   │   └── index.css             # Tailwind CSS
 │   ├── package.json
-│   └── vite.config.js
+│   └── vite.config.ts
 │
 └── README.md
 ```
@@ -132,14 +156,15 @@ agrivision/
 - **CORS**: Flask-CORS
 
 ### Frontend
-- **Framework**: React 18
-- **Build Tool**: Vite
-- **Styling**: TailwindCSS
+- **Framework**: React 18 with TypeScript
+- **Build Tool**: Vite 6
+- **Styling**: TailwindCSS v4
+- **UI Components**: Radix UI
 - **Routing**: React Router DOM
-- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Animations**: Custom liquid glass morphing effects
 - **Charts**: Recharts
-- **HTTP Client**: Axios
-- **PDF Generation**: jsPDF
+- **HTTP Client**: Native Fetch API
 
 ## 🌐 API Endpoints
 
@@ -200,12 +225,14 @@ The model can detect 38 different plant diseases across multiple crops:
 
 ## 🎨 UI/UX Features
 
-- **Modern Design**: Clean, green-themed interface
-- **Drag & Drop**: Easy image upload functionality
+- **Modern Design**: Clean, green-themed interface with glassmorphism
+- **Liquid Glass Effects**: Beautiful morphing animations throughout
+- **Drag & Drop**: Easy image upload functionality with visual feedback
 - **Real-time Feedback**: Loading animations and progress indicators
 - **Responsive Layout**: Mobile-first design approach
-- **Smooth Animations**: Framer Motion powered transitions
-- **Interactive Charts**: Visual analytics with Recharts
+- **Dark Mode**: Toggle between light and dark themes
+- **Smooth Animations**: Custom CSS animations with morphing effects
+- **Interactive Components**: Radix UI powered accessible components
 
 ## 🚀 Deployment
 
@@ -249,31 +276,31 @@ Frontend (`.env`):
 VITE_API_URL=https://your-backend-url.com
 ```
 
-## 👥 Team
+##  Team
 
-- **Alex Johnson** - Data Collection & Preparation
-- **Sarah Williams** - AI Model Development
-- **Michael Chen** - Backend & Deployment
-- **Emily Davis** - Frontend Development
+- **shabrish** - Data Collection & Preparation
+- **harsha vardhan** - AI Model Development
+- **nandan** - Backend & Deployment
+- **sreenitha** - Frontend Development
 
-**Institution**: University of Agricultural Sciences  
-**Guide**: Dr. Robert Anderson  
-**Project Year**: 2024-2025
+**Institution**: Msrit  
+**Guide**: meera maam  
+**Project Year**: 2025-2026
 
-## 📝 License
+##  License
 
 This project is developed as an academic capstone project.
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-## 📧 Contact
+##  Contact
 
-- Email: agrivision@example.com
-- Project Link: [https://github.com/yourusername/agrivision](https://github.com/yourusername/agrivision)
+- Email: honganasu06@gmail.com
+- Project Link: [https://github.com/honganasu06/Crop-disease-detection](https://github.com/honganasu06/Crop-disease-detection)
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - PlantVillage dataset for training data
 - TensorFlow and Keras teams

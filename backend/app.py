@@ -169,7 +169,15 @@ def predict():
         display_name = disease_name.replace('___', ' - ').replace('_', ' ')
         
         # Get remedy
-        remedy = remedies.get(disease_name, "Consult an agricultural expert for specific treatment.")
+        # Default structured remedy if not found
+        default_remedy = {
+            "description": "Consult an agricultural expert for specific treatment.",
+            "causes": [],
+            "cure": [],
+            "prevention": [],
+            "medicine": []
+        }
+        remedy = remedies.get(disease_name, default_remedy)
         
         # Log prediction
         log_prediction(file.filename, display_name, confidence)

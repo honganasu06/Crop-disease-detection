@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Harsha vardhan",
+    "role": "AI Model Development",
+    "bio": "Specialized in computer vision and deep learning. Led the model architecture and training pipeline.",
+    "email": "honganasu06@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/harsha-vardhan-87a962345/",
+    "github": "https://github.com/honganasu06"
+  },
+  {
+    "name": "sreenitha",
+    "role": "Frontend Development",
+    "bio": "Expert in agricultural data analysis. Managed dataset curation and model optimization.",
+    "email": "#",
+    "linkedin": "#",
+    "github": "#"
+  },
+  {
+    "name": "nandan",
+    "role": "Backend & Deployment",
+    "bio": "Built the web application infrastructure and integrated AI models with the frontend.",
+    "email": "#",
+    "linkedin": "#",
+    "github": "#"
+  },
+  {
+    "name": "shabrish",
+    "role": "Data Collection & Preparation",
+    "bio": " Validated model predictions and treatment recommendations.",
+    "email": "#",
+    "linkedin": "#",
+    "github": "#"
+  }
+]
