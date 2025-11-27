@@ -7,7 +7,7 @@ A complete full-stack web application for detecting crop diseases using AI/ML, f
 ![React](https://img.shields.io/badge/React-18.0+-61DAFB)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.15-orange)
 
-## 🎯 Features
+##  Features
 
 - **AI-Powered Detection**: Upload plant leaf images and get instant disease predictions
 - **High Accuracy**: CNN model trained on PlantVillage dataset (38 disease classes)
@@ -19,7 +19,7 @@ A complete full-stack web application for detecting crop diseases using AI/ML, f
 - **Real-time Processing**: Get results in seconds
 - **Dark Mode Support**: Toggle between light and dark themes
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 
@@ -110,7 +110,7 @@ npm run dev
 
 The frontend will be available at `http://localhost:3000` (or the port specified in vite.config.ts)
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 agrivision/
@@ -146,7 +146,7 @@ agrivision/
 └── README.md
 ```
 
-## 🔧 Technology Stack
+##  Technology Stack
 
 ### Backend
 - **Framework**: Flask 3.0
@@ -166,7 +166,7 @@ agrivision/
 - **Charts**: Recharts
 - **HTTP Client**: Native Fetch API
 
-## 🌐 API Endpoints
+##  API Endpoints
 
 ### POST `/predict`
 Upload an image for disease detection.
@@ -210,7 +210,7 @@ Health check endpoint.
 }
 ```
 
-## 📊 Supported Diseases
+##  Supported Diseases
 
 The model can detect 38 different plant diseases across multiple crops:
 - Apple (4 diseases + healthy)
@@ -223,7 +223,7 @@ The model can detect 38 different plant diseases across multiple crops:
 - Tomato (9 diseases + healthy)
 - And more...
 
-## 🎨 UI/UX Features
+##  UI/UX Features
 
 - **Modern Design**: Clean, green-themed interface with glassmorphism
 - **Liquid Glass Effects**: Beautiful morphing animations throughout
@@ -234,7 +234,7 @@ The model can detect 38 different plant diseases across multiple crops:
 - **Smooth Animations**: Custom CSS animations with morphing effects
 - **Interactive Components**: Radix UI powered accessible components
 
-## 🚀 Deployment
+##  Deployment
 
 ### Backend Deployment
 
@@ -278,6 +278,7 @@ VITE_API_URL=https://your-backend-url.com
 
 ##  Team
 
+<<<<<<< HEAD
 - **shabrish** - Data Collection & Preparation
 - **harsha vardhan** - AI Model Development
 - **nandan** - Backend & Deployment
@@ -286,6 +287,16 @@ VITE_API_URL=https://your-backend-url.com
 **Institution**: Msrit  
 **Guide**: meera maam  
 **Project Year**: 2025-2026
+=======
+- **Harsha** - Data Collection & Preparation
+- **shabrish** - AI Model Development
+- **nadan** - Backend & Deployment
+- **sreenitha** - Frontend Development
+
+**Institution**: Msrit 
+**Guide**: Meera ma'am 
+**Project Year**: 2024-2025
+>>>>>>> dcded5387580d4d6cccfbc6306597d2b558da0c3
 
 ##  License
 
