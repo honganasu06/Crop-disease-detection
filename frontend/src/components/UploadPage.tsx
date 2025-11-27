@@ -85,10 +85,10 @@ export function UploadPage() {
             <div
               {...getRootProps()}
               className={`relative bg-card/50 backdrop-blur-xl rounded-3xl border-2 border-dashed transition-all duration-300 min-h-[400px] flex flex-col items-center justify-center cursor-pointer overflow-hidden ${isDragActive
-                  ? 'border-primary bg-primary/5 shadow-[0_0_50px_rgba(57,255,20,0.2)] scale-[1.02]'
-                  : error
-                    ? 'border-destructive/50 hover:border-destructive'
-                    : 'border-white/10 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(57,255,20,0.1)]'
+                ? 'border-primary bg-primary/5 shadow-[0_0_50px_rgba(57,255,20,0.2)] scale-[1.02]'
+                : error
+                  ? 'border-destructive/50 hover:border-destructive'
+                  : 'border-white/10 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(57,255,20,0.1)]'
                 }`}
             >
               <input {...getInputProps()} />
@@ -109,6 +109,7 @@ export function UploadPage() {
                       handleRemove();
                     }}
                     className="absolute top-6 right-6 p-2 bg-black/50 hover:bg-destructive text-white rounded-full backdrop-blur-md transition-colors border border-white/10"
+                    aria-label="Remove image"
                   >
                     <X className="w-5 h-5" />
                   </button>
