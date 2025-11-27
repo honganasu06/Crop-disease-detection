@@ -51,7 +51,9 @@ echo Activating virtual environment...
 call venv\Scripts\activate.bat
 
 echo Installing backend dependencies...
+cd backend
 pip install -r requirements.txt
+cd ..
 if %errorlevel% neq 0 (
     echo [ERROR] Failed to install backend dependencies.
     pause
