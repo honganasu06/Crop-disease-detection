@@ -123,19 +123,19 @@ export function HomePage() {
               <span className="text-primary font-mono text-sm tracking-wider uppercase">System Online • v2.0</span>
             </div>
 
-            <div className="space-y-6">
-              <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter">
+            <div className="space-y-8">
+              <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter animate-float">
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400 glitch-effect" data-text="FUTURE OF">
                   FUTURE OF
                 </span>
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent drop-shadow-[0_0_20px_hsl(var(--primary)/0.4)] glitch-effect" data-text="AGRICULTURE">
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-green-300 to-emerald-500 drop-shadow-[0_0_30px_rgba(74,222,128,0.5)] glitch-effect" data-text="AGRICULTURE">
                   AGRICULTURE
                 </span>
               </h1>
 
-              <p className="text-muted-foreground text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed">
+              <p className="text-muted-foreground text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed font-light">
                 Next-generation plant disease detection powered by <span className="text-primary font-semibold">Neural Networks</span>.
-                Instant analysis with <span className="text-accent font-semibold">{accuracyCount}% accuracy</span>.
+                Instant analysis with <span className="text-primary font-bold">{accuracyCount}% accuracy</span>.
               </p>
             </div>
 
@@ -170,13 +170,13 @@ export function HomePage() {
             <div className="h-1 w-24 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto"></div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <TiltCard className="h-full">
-              <div className="glass-crystalline rounded-3xl p-8 hover:border-primary/50 transition-colors h-full group">
-                <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-primary/20 shadow-[0_0_15px_hsl(var(--primary)/0.2)]">
-                  <Brain className="w-7 h-7 text-primary" />
+              <div className="glass-crystalline rounded-3xl p-8 hover:border-primary/50 transition-all duration-500 h-full group hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(74,222,128,0.2)]">
+                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 border border-primary/20 shadow-[0_0_20px_rgba(74,222,128,0.2)]">
+                  <Brain className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-white group-hover:text-primary transition-colors">Neural Engine</h3>
+                <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-primary transition-colors">Neural Engine</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Powered by advanced CNN architectures optimized for pattern recognition in biological structures.
                 </p>
@@ -184,11 +184,11 @@ export function HomePage() {
             </TiltCard>
 
             <TiltCard className="h-full">
-              <div className="glass-crystalline rounded-3xl p-8 hover:border-secondary/50 transition-colors h-full group">
-                <div className="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-secondary/20 shadow-[0_0_15px_hsl(var(--secondary)/0.2)]">
-                  <TrendingUp className="w-7 h-7 text-secondary" />
+              <div className="glass-crystalline rounded-3xl p-8 hover:border-blue-400/50 transition-all duration-500 h-full group hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(96,165,250,0.2)]">
+                <div className="w-16 h-16 rounded-2xl bg-blue-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 border border-blue-500/20 shadow-[0_0_20px_rgba(96,165,250,0.2)]">
+                  <TrendingUp className="w-8 h-8 text-blue-400" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-white group-hover:text-secondary transition-colors">Transfer Learning</h3>
+                <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors">Transfer Learning</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Adaptive model weights fine-tuned on specific crop pathologies for maximum precision.
                 </p>
@@ -196,25 +196,25 @@ export function HomePage() {
             </TiltCard>
 
             <TiltCard className="h-full">
-              <div className="glass-crystalline rounded-3xl p-8 hover:border-accent/50 transition-colors h-full group">
-                <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-accent/20 shadow-[0_0_15px_hsl(var(--accent)/0.2)]">
-                  <Database className="w-7 h-7 text-accent" />
+              <div className="glass-crystalline rounded-3xl p-8 hover:border-purple-400/50 transition-all duration-500 h-full group hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(192,132,252,0.2)]">
+                <div className="w-16 h-16 rounded-2xl bg-purple-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 border border-purple-500/20 shadow-[0_0_20px_rgba(192,132,252,0.2)]">
+                  <Database className="w-8 h-8 text-purple-400" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-white group-hover:text-accent transition-colors">Big Data</h3>
+                <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-purple-400 transition-colors">Big Data</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Trained on <span className="text-primary font-mono">{datasetCount.toLocaleString()}</span> validated samples across 38 distinct disease classes.
+                  Trained on <span className="text-primary font-mono font-bold">{datasetCount.toLocaleString()}</span> validated samples across 38 distinct disease classes.
                 </p>
               </div>
             </TiltCard>
 
             <TiltCard className="h-full">
-              <div className="glass-crystalline rounded-3xl p-8 hover:border-primary/50 transition-colors h-full group">
-                <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-primary/20 shadow-[0_0_15px_hsl(var(--primary)/0.2)]">
-                  <Award className="w-7 h-7 text-primary" />
+              <div className="glass-crystalline rounded-3xl p-8 hover:border-yellow-400/50 transition-all duration-500 h-full group hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(250,204,21,0.2)]">
+                <div className="w-16 h-16 rounded-2xl bg-yellow-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 border border-yellow-500/20 shadow-[0_0_20px_rgba(250,204,21,0.2)]">
+                  <Award className="w-8 h-8 text-yellow-400" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-white group-hover:text-primary transition-colors">High Precision</h3>
+                <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-yellow-400 transition-colors">High Precision</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Industry-leading <span className="text-accent font-mono">{accuracyCount}%</span> validation accuracy in controlled environments.
+                  Industry-leading <span className="text-primary font-mono font-bold">{accuracyCount}%</span> validation accuracy in controlled environments.
                 </p>
               </div>
             </TiltCard>

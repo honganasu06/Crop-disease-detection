@@ -29,17 +29,12 @@ A complete full-stack web application for detecting crop diseases using AI/ML, f
 
 ### Quick Start (Windows)
 
-1. **Start Backend**:
-   Double-click `start-backend.bat` or run in terminal:
-   ```bash
-   .\start-backend.bat
-   ```
+1. **One-Click Launch**:
+   Double-click `start-app.bat` to launch the Backend, Frontend, and open the App in your browser automatically.
 
-2. **Start Frontend**:
-   Double-click `start-frontend.bat` or run in terminal:
-   ```bash
-   .\start-frontend.bat
-   ```
+2. **Manual Launch**:
+   - Backend: `start-backend.bat`
+   - Frontend: `start-frontend.bat`
 
 3. **Access App**:
    Open [http://localhost:3000](http://localhost:3000)
@@ -278,25 +273,14 @@ VITE_API_URL=https://your-backend-url.com
 
 ##  Team
 
-<<<<<<< HEAD
-- **shabrish** - Data Collection & Preparation
-- **harsha vardhan** - AI Model Development
-- **nandan** - Backend & Deployment
-- **sreenitha** - Frontend Development
+- **Shabrish** - Data Collection & Preparation
+- **Harsha Vardhan** - AI Model Development
+- **Nandan** - Backend & Deployment
+- **Sreenitha** - Frontend Development
 
-**Institution**: Msrit  
-**Guide**: meera maam  
+**Institution**: MSRIT
+**Guide**: Prof. Meera
 **Project Year**: 2025-2026
-=======
-- **Harsha** - Data Collection & Preparation
-- **shabrish** - AI Model Development
-- **nadan** - Backend & Deployment
-- **sreenitha** - Frontend Development
-
-**Institution**: Msrit 
-**Guide**: Meera ma'am 
-**Project Year**: 2024-2025
->>>>>>> dcded5387580d4d6cccfbc6306597d2b558da0c3
 
 ##  License
 

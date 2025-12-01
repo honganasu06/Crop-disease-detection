@@ -90,57 +90,67 @@ export function ResultsPage() {
         </div>
 
         {/* Main Result Card */}
-        <div className={`bg-card rounded-2xl p-8 border border-border shadow-lg liquid-glass-card liquid-glass-morph ${pageReveal.isRevealed ? 'animate-scale-in' : 'opacity-0'}`} ref={cardReveal.elementRef}>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="rounded-xl overflow-hidden bg-muted border border-border">
+        <div className={`bg-card/80 backdrop-blur-xl rounded-3xl p-8 border border-white/10 shadow-[0_0_50px_rgba(0,0,0,0.3)] liquid-glass-card liquid-glass-morph ${pageReveal.isRevealed ? 'animate-scale-in' : 'opacity-0'}`} ref={cardReveal.elementRef}>
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="rounded-2xl overflow-hidden bg-black/20 border border-white/10 shadow-2xl relative group">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10"></div>
               {result.imageUrl ? (
                 <img
                   src={result.imageUrl}
                   alt="Analyzed leaf"
-                  className="w-full h-full object-cover aspect-square"
+                  className="w-full h-full object-cover aspect-square transform group-hover:scale-110 transition-transform duration-700"
                 />
               ) : (
                 <ImageWithFallback
                   src="https://images.unsplash.com/photo-1650731900879-b5f25088ff31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmVlbiUyMGxlYXZlcyUyMG5hdHVyZXxlbnwxfHx8fDE3NjMyMTAxMTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
                   alt="Analyzed leaf"
-                  className="w-full h-full object-cover aspect-square"
+                  className="w-full h-full object-cover aspect-square transform group-hover:scale-110 transition-transform duration-700"
                 />
               )}
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-8 flex flex-col justify-center">
               <div>
-                <h2 className="text-foreground mb-2 text-3xl font-bold">{result.prediction}</h2>
-                <p className="text-muted-foreground text-lg">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-mono mb-4">
+                  <Leaf className="w-4 h-4" />
+                  <span>AI Diagnosis</span>
+                </div>
+                <h2 className="text-foreground mb-4 text-4xl md:text-5xl font-bold tracking-tight">{result.prediction}</h2>
+                <p className="text-muted-foreground text-lg leading-relaxed border-l-2 border-primary/30 pl-4">
                   {result.remedy.description}
                 </p>
               </div>
 
-              <div className="space-y-4">
-                <div className="space-y-2">
+              <div className="space-y-6 bg-white/5 p-6 rounded-2xl border border-white/5">
+                <div className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="text-muted-foreground">Confidence Level</span>
-                    <span className="text-foreground font-bold">{result.confidence}%</span>
+                    <span className="text-muted-foreground font-medium">Confidence Level</span>
+                    <span className="text-primary font-bold text-xl">{result.confidence}%</span>
                   </div>
-                  <div className="h-2 bg-muted rounded-full overflow-hidden">
+                  <div className="h-4 bg-black/40 rounded-full overflow-hidden border border-white/5 relative">
                     <div
-                      className="h-full bg-primary rounded-full progress-animated animate-pulse-glow"
+                      className="h-full bg-gradient-to-r from-primary to-green-400 rounded-full relative overflow-hidden"
                       style={{ width: `${result.confidence}%` }}
-                    ></div>
+                    >
+                      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
+                      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-white/20 to-transparent"></div>
+                      <div className="absolute top-0 right-0 h-full w-2 bg-white/50 blur-[2px]"></div>
+                    </div>
                   </div>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-accent/30 rounded-xl p-4 space-y-1">
-                    <p className="text-muted-foreground">Severity</p>
-                    <p className="text-foreground font-bold">{getSeverity(result.confidence)}</p>
+                  <div className="bg-black/20 rounded-xl p-4 space-y-1 border border-white/5">
+                    <p className="text-muted-foreground text-sm uppercase tracking-wider">Severity</p>
+                    <p className={`text-xl font-bold ${getSeverity(result.confidence) === 'High' ? 'text-destructive' : 'text-foreground'}`}>
+                      {getSeverity(result.confidence)}
+                    </p>
                   </div>
-                  <div className="bg-accent/30 rounded-xl p-4 space-y-1">
-                    <p className="text-muted-foreground">Status</p>
-                    <p className={`font-bold ${result.confidence >= 70 ? 'text-destructive' : 'text-chart-4'}`}>
+                  <div className="bg-black/20 rounded-xl p-4 space-y-1 border border-white/5">
+                    <p className="text-muted-foreground text-sm uppercase tracking-wider">Status</p>
+                    <p className={`text-xl font-bold ${result.confidence >= 70 ? 'text-yellow-400' : 'text-blue-400'}`}>
                       {result.confidence >= 70 ? 'Action Required' : 'Monitor Closely'}
                     </p>
-
                   </div>
                 </div>
               </div>
@@ -149,21 +159,21 @@ export function ResultsPage() {
 
 
           {/* Detailed Information Grid */}
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-8">
 
             {/* Causes */}
-            <div className="bg-card rounded-2xl p-6 border border-border shadow-lg liquid-glass-card liquid-glass-hover">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-full bg-orange-500/10 flex items-center justify-center">
-                  <AlertCircle className="w-5 h-5 text-orange-500" />
+            <div className="bg-card/50 backdrop-blur-lg rounded-3xl p-8 border border-white/5 shadow-lg hover:border-orange-500/30 transition-colors group">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 rounded-2xl bg-orange-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-orange-500/20">
+                  <AlertCircle className="w-6 h-6 text-orange-500" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground">Causes</h3>
+                <h3 className="text-2xl font-bold text-foreground">Causes</h3>
               </div>
-              <ul className="space-y-2">
+              <ul className="space-y-4">
                 {result.remedy.causes.map((cause, index) => (
-                  <li key={index} className="flex items-start gap-2 text-muted-foreground">
-                    <span className="w-1.5 h-1.5 rounded-full bg-orange-500 mt-2 flex-shrink-0"></span>
-                    {cause}
+                  <li key={index} className="flex items-start gap-3 text-muted-foreground">
+                    <span className="w-1.5 h-1.5 rounded-full bg-orange-500 mt-2.5 flex-shrink-0 shadow-[0_0_10px_orange]"></span>
+                    <span className="leading-relaxed">{cause}</span>
                   </li>
                 ))}
                 {result.remedy.causes.length === 0 && <li className="text-muted-foreground italic">No specific causes listed.</li>}
@@ -171,18 +181,18 @@ export function ResultsPage() {
             </div>
 
             {/* Prevention */}
-            <div className="bg-card rounded-2xl p-6 border border-border shadow-lg liquid-glass-card liquid-glass-hover">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center">
-                  <Shield className="w-5 h-5 text-green-500" />
+            <div className="bg-card/50 backdrop-blur-lg rounded-3xl p-8 border border-white/5 shadow-lg hover:border-green-500/30 transition-colors group">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 rounded-2xl bg-green-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-green-500/20">
+                  <Shield className="w-6 h-6 text-green-500" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground">Prevention</h3>
+                <h3 className="text-2xl font-bold text-foreground">Prevention</h3>
               </div>
-              <ul className="space-y-2">
+              <ul className="space-y-4">
                 {result.remedy.prevention.map((item, index) => (
-                  <li key={index} className="flex items-start gap-2 text-muted-foreground">
-                    <span className="w-1.5 h-1.5 rounded-full bg-green-500 mt-2 flex-shrink-0"></span>
-                    {item}
+                  <li key={index} className="flex items-start gap-3 text-muted-foreground">
+                    <span className="w-1.5 h-1.5 rounded-full bg-green-500 mt-2.5 flex-shrink-0 shadow-[0_0_10px_green]"></span>
+                    <span className="leading-relaxed">{item}</span>
                   </li>
                 ))}
                 {result.remedy.prevention.length === 0 && <li className="text-muted-foreground italic">No specific prevention methods listed.</li>}
@@ -190,18 +200,18 @@ export function ResultsPage() {
             </div>
 
             {/* Cures */}
-            <div className="bg-card rounded-2xl p-6 border border-border shadow-lg liquid-glass-card liquid-glass-hover">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center">
-                  <Stethoscope className="w-5 h-5 text-blue-500" />
+            <div className="bg-card/50 backdrop-blur-lg rounded-3xl p-8 border border-white/5 shadow-lg hover:border-blue-500/30 transition-colors group">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 rounded-2xl bg-blue-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-blue-500/20">
+                  <Stethoscope className="w-6 h-6 text-blue-500" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground">Cure & Management</h3>
+                <h3 className="text-2xl font-bold text-foreground">Cure & Management</h3>
               </div>
-              <ul className="space-y-2">
+              <ul className="space-y-4">
                 {result.remedy.cure.map((item, index) => (
-                  <li key={index} className="flex items-start gap-2 text-muted-foreground">
-                    <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0"></span>
-                    {item}
+                  <li key={index} className="flex items-start gap-3 text-muted-foreground">
+                    <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2.5 flex-shrink-0 shadow-[0_0_10px_blue]"></span>
+                    <span className="leading-relaxed">{item}</span>
                   </li>
                 ))}
                 {result.remedy.cure.length === 0 && <li className="text-muted-foreground italic">No specific cures listed.</li>}
@@ -209,16 +219,16 @@ export function ResultsPage() {
             </div>
 
             {/* Medicine */}
-            <div className="bg-card rounded-2xl p-6 border border-border shadow-lg liquid-glass-card liquid-glass-hover">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-full bg-purple-500/10 flex items-center justify-center">
-                  <Pill className="w-5 h-5 text-purple-500" />
+            <div className="bg-card/50 backdrop-blur-lg rounded-3xl p-8 border border-white/5 shadow-lg hover:border-purple-500/30 transition-colors group">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 rounded-2xl bg-purple-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-purple-500/20">
+                  <Pill className="w-6 h-6 text-purple-500" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground">Recommended Medicine</h3>
+                <h3 className="text-2xl font-bold text-foreground">Recommended Medicine</h3>
               </div>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-3">
                 {result.remedy.medicine.map((med, index) => (
-                  <span key={index} className="px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-500 text-sm font-medium">
+                  <span key={index} className="px-4 py-2 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-bold hover:bg-purple-500/20 transition-colors cursor-default">
                     {med}
                   </span>
                 ))}
